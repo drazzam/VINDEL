@@ -1099,18 +1099,18 @@ print(f"Interpretation: {diversity['interpretation']}")
 - Wei & Royston (2017): "Reconstructing time-to-event data from published KM curves"
 
 **VINDEL Framework**
-- GitHub repository: https://github.com/drazzam/vindel
+- GitHub repository: https://github.com/drazzam/VINDEL
 
 ### Citation
 
 If you use VINDEL in your research, please cite:
 
 ```bibtex
-@software{vindel2024,
+@software{vindel2025,
   author = {Azzam, Ahmed Y.},
   title = {VINDEL: VINe-based DEgree-of-freedom Learning for Synthetic IPD Generation},
-  year = {2024},
-  url = {https://github.com/drazzam/vindel}
+  year = {2025},
+  url = {https://github.com/drazzam/VINDEL}
 }
 ```
 
