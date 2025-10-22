@@ -12,21 +12,20 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="vindel",
-    author="Ahmed Azzam",
-    author_email="",  # Add if desired
+    name="VINDEL",
+    author="Ahmed Y. Azzam",
+    author_email="ahmed.azzam@hsc.wvu.edu",  
     description="LLM-Integrated Bayesian Framework for Synthetic Individual Patient Data Generation",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/vindel",  # Add if desired
     project_urls={
-        "Documentation": "https://github.com/yourusername/vindel/docs",
-        "Source": "https://github.com/yourusername/vindel",
-        "Bug Reports": "https://github.com/yourusername/vindel/issues",
+        "Documentation": "https://github.com/drazzam/VINDEL", # Check README.md file
+        "Source": "https://github.com/drazzam/VINDEL",
     },
     packages=find_packages(exclude=["tests", "examples", "docs"]),
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: Beta",
         "Intended Audience :: Science/Research",
         "Intended Audience :: Healthcare Industry",
         "Topic :: Scientific/Engineering :: Medical Science Apps.",
