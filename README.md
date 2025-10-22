@@ -433,20 +433,20 @@ VINDEL is a sophisticated framework that combines multiple advanced techniques t
                         │  ┌──────────────────────────┐  │
                         │  │ Marginal (C_marg)        │  │  11 Constraint Types:
                         │  │ Joint (C_joint)          │  │  ─────────────────────
-                        │  │ Conditional (C_cond) NEW!│  │  • Marginal distributions
+                        │  │ Conditional (C_cond)     │  │  • Marginal distributions
                         │  │ Survival (C_surv)        │  │  • Pairwise correlations
-                        │  │ Subgroup Surv. NEW!      │  │  • Conditional correlations
-                        │  │ Time-varying HR NEW!     │  │  • Survival curves (KM)
-                        │  │ Multi-outcome NEW!       │  │  • Subgroup survival
+                        │  │ Subgroup Surv.           │  │  • Conditional correlations
+                        │  │ Time-varying HR          │  │  • Survival curves (KM)
+                        │  │ Multi-outcome            │  │  • Subgroup survival
                         │  │ Causal (C_causal)        │  │  • Time-varying hazards
                         │  │ Network (C_net)          │  │  • Multi-outcome coherence
-                        │  │ Physics (C_phys) NEW!    │  │  • Treatment effects
+                        │  │ Physics (C_phys)            │  │  • Treatment effects
                         │  └──────────────────────────┘  │  • Network consistency
                         └────────────────┬───────────────┘  • Physics-informed
                                          │
                                          ▼
 ╔═══════════════════════════════════════════════════════════════════════════════╗
-║ LAYER 2: VALIDATION & FEASIBILITY CHECKING (NEW!)                              ║
+║ LAYER 2: VALIDATION & FEASIBILITY CHECKING                                    ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
               ┌───────────────────────────────────────────────┐
@@ -478,19 +478,19 @@ VINDEL is a sophisticated framework that combines multiple advanced techniques t
 │                                                                              │
 │  ┌──────────────────────────────────────────────────────────────────────┐  │
 │  │ L₁: Marginal Loss           → λ_marg · Σ (μ_emp - μ_target)²         │  │
-│  │ L₂: Joint Loss (Fisher Z) NEW! → λ_joint · Σ (z_emp - z_target)²     │  │
+│  │ L₂: Joint Loss (Fisher Z)      → λ_joint · Σ (z_emp - z_target)²     │  │
 │  │ L₃: Conditional Loss        → λ_cond · Σ (ρ|subgroup - ρ_target)²    │  │
 │  │ L₄: KM Loss                 → λ_KM · Σ (S(t)_emp - S(t)_pub)²        │  │
-│  │ L₅: Subgroup KM Loss NEW!   → λ_KM,subg · Σ (S_g(t) - S_g,pub(t))²  │  │
-│  │ L₆: Time-varying HR NEW!    → λ_HR,TV · Σ (log HR_k - log HR_k^pub)²│  │
-│  │ L₇: Quantile Loss NEW!      → λ_quantile · Σ check(τ, q_emp, q_tgt) │  │
-│  │ L₈: Multi-outcome NEW!      → λ_multi · (binary + survival + mono)   │  │
+│  │ L₅: Subgroup KM Loss         → λ_KM,subg · Σ (S_g(t) - S_g,pub(t))²  │  │
+│  │ L₆: Time-varying HR          → λ_HR,TV · Σ (log HR_k - log HR_k^pub)²│  │
+│  │ L₇: Quantile Loss            → λ_quantile · Σ check(τ, q_emp, q_tgt) │  │
+│  │ L₈: Multi-outcome           → λ_multi · (binary + survival + mono)   │  │
 │  │ L₉: Causal Loss             → λ_causal · (ATE_emp - ATE_pub)²        │  │
-│  │ L₁₀: Physics Loss NEW!      → λ_phys · (monotone + bounds + ...  )   │  │
+│  │ L₁₀: Physics Loss           → λ_phys · (monotone + bounds + ...  )   │  │
 │  └──────────────────────────────────────────────────────────────────────┘  │
 │                                                                              │
 │  ┌──────────────────────────────────────────────────────────────────────┐  │
-│  │ ADAPTIVE WEIGHTING (NEW!)                                             │  │
+│  │ ADAPTIVE WEIGHTING                                                    │  │
 │  │ • Learn λ via softmax parameterization                                │  │
 │  │ • Entropy regularization prevents collapse                            │  │
 │  │ • Automatic balance based on constraint strength                      │  │
@@ -503,7 +503,7 @@ VINDEL is a sophisticated framework that combines multiple advanced techniques t
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
               ┌────────────────────────────────────────────┐
-              │ CONTEXT-AWARE MODEL SELECTION (NEW!)       │
+              │ CONTEXT-AWARE MODEL SELECTION              │
               │                                             │
               │ Analyze Constraints:                       │
               │ ├─ Has heavy survival? → Add Archimedean  │
@@ -620,7 +620,7 @@ VINDEL is a sophisticated framework that combines multiple advanced techniques t
                                     │
                                     ▼
 ╔═══════════════════════════════════════════════════════════════════════════════╗
-║ LAYER 7: VALIDATION & DIAGNOSTICS (NEW!)                                       ║
+║ LAYER 7: VALIDATION & DIAGNOSTICS                                             ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -673,12 +673,12 @@ KEY INNOVATIONS IN VINDEL:
 2. Physics-informed constraints (monotonicity, bounds, natural history)
 3. Bayesian Model Averaging for structural uncertainty quantification
 4. LLM integration for dynamic constraint enrichment from literature
-5. Fisher Z-transform for improved correlation loss gradients (NEW!)
-6. Quantile loss with check function (NEW!)
-7. Adaptive loss weighting via learnable parameters (NEW!)
-8. Constraint feasibility checking before training (NEW!)
-9. Context-aware model selection based on constraint patterns (NEW!)
-10. Enhanced BMA diagnostics (ESS, entropy, diversity metrics) (NEW!)
+5. Fisher Z-transform for improved correlation loss gradients 
+6. Quantile loss with check function 
+7. Adaptive loss weighting via learnable parameters 
+8. Constraint feasibility checking before training 
+9. Context-aware model selection based on constraint patterns 
+10. Enhanced BMA diagnostics (ESS, entropy, diversity metrics) 
 ═══════════════════════════════════════════════════════════════════════════════
 ```
 
@@ -703,7 +703,7 @@ The VINDEL framework supports 11 different constraint types, organized into four
   - Median survival, hazard ratios
   - Loss: Sum of squared deviations at specified time points
 
-**B. Enrichment Constraints (NEW)**
+**B. Enrichment Constraints **
 - **Conditional Correlations** (`C_cond`): Subgroup-specific correlations
   - Example: Age-Weight correlation differs by gender
   - Enables capturing heterogeneous dependence structures
@@ -832,7 +832,7 @@ The enhanced `get_default_model_space` method adapts the model space based on pr
 - **Conditional constraints**: Suggests tail dependence → mixed families
 - **High dimensionality** (p > 20): Reduce model space for computational efficiency
 
-#### 4. **Constraint Feasibility Checker (NEW)**
+#### 4. **Constraint Feasibility Checker**
 
 Before training, VINDEL checks for contradictory constraints:
 
@@ -975,7 +975,7 @@ VINDEL explicitly acknowledges the identifiability hierarchy:
 - Exploratory heterogeneity analysis (hypothesis-generating)
 
 ❌ **Inappropriate Use Cases**:
-- Primary evidence for regulatory approval (without validation)
+- Primary evidence for regulatory approval (without validation) unless there are sufficient trials that prove first instance of safety and efficacy (under caution keep in mind)
 - Claims of "discovering" effects not in published data
 - Replacement for real IPD when accessible
 - Individual patient-level predictions
@@ -1099,9 +1099,7 @@ print(f"Interpretation: {diversity['interpretation']}")
 - Wei & Royston (2017): "Reconstructing time-to-event data from published KM curves"
 
 **VINDEL Framework**
-- Original paper: [To be published]
-- GitHub repository: https://github.com/yourusername/vindel
-- Documentation: https://vindel.readthedocs.io
+- GitHub repository: https://github.com/drazzam/vindel
 
 ### Citation
 
@@ -1112,7 +1110,7 @@ If you use VINDEL in your research, please cite:
   author = {Azzam, Ahmed Y.},
   title = {VINDEL: VINe-based DEgree-of-freedom Learning for Synthetic IPD Generation},
   year = {2024},
-  url = {https://github.com/yourusername/vindel}
+  url = {https://github.com/drazzam/vindel}
 }
 ```
 
@@ -1128,8 +1126,7 @@ MIT License - see LICENSE file for details.
 
 For questions, bug reports, or feature requests:
 - Open an issue on GitHub
-- Email: ahmed.azzam@example.com
-- Documentation: https://vindel.readthedocs.io
+- Email: ahmed.azzam@hsc.wvu.edu
 
 ---
 
