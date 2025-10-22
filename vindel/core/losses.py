@@ -1,7 +1,7 @@
 """
 Loss Functions for VINDEL Framework
 
-Implements all 11 constraint types from Section 4.3 (Eq. 4.5):
+Implements all 11 constraint types:
 - Marginal, Joint, Conditional, Survival, Subgroup Survival
 - Causal, Multi-outcome, Network, Physics
 - Time-varying HR, Optimal Transport (optional)
