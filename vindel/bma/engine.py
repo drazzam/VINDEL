@@ -1,7 +1,6 @@
 """
 Bayesian Model Averaging (BMA) Engine
 
-Implements Algorithm 1 from Section 5 of VINDEL framework:
 - Phase 1: Model selection via short burn-in and BIC computation
 - Phase 2: Proportional posterior sampling with full training
 """
