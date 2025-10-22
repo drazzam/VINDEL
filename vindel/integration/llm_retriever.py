@@ -24,10 +24,10 @@ logger = logging.getLogger(__name__)
 
 
 # ============================================================================
-# CLAUDE INSTRUCTION PROTOCOL
+# LLM INSTRUCTION PROTOCOL
 # ============================================================================
 
-CLAUDE_INSTRUCTIONS = """
+LLM_INSTRUCTIONS = """
 === INSTRUCTIONS FOR LLMs (CLAUDE OR CHATGPT) WHEN EXECUTING THIS PACKAGE ===
 
 IMPORTANT: Users should request the LLM to load and activate Python runtime before using this package.
@@ -470,7 +470,7 @@ class DiseaseProfileRetriever:
 
 @dataclass
 class ExtractedConstraints:
-    """Constraints extracted from a paper via Claude's NLP"""
+    """Constraints extracted from a paper via LLM's NLP"""
     paper_url: str
     paper_title: str
     
@@ -675,7 +675,7 @@ class SmartParameterSelector:
 
 def print_usage_instructions():
     """Print instructions for LLMs (Claude or ChatGPT) on how to use this module"""
-    print(CLAUDE_INSTRUCTIONS)
+    print(LLM_INSTRUCTIONS)
     print("""
     === USAGE EXAMPLE FOR LLMs ===
 
