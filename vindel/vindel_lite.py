@@ -3,7 +3,7 @@ VINDEL-Lite: Streamlined Synthetic IPD Generation Framework
 ============================================================
 
 A computationally efficient implementation of the VINDEL (VINe-based DEgree-of-freedom
-Learning) framework, optimized for Claude's Python interface while preserving statistical
+Learning) framework, optimized for Claude's and ChatGPT Python interface while preserving statistical
 validity and Bayesian Model Averaging foundations.
 
 Key Features:
