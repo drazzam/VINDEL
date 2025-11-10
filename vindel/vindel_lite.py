@@ -17,7 +17,7 @@ Key Features:
 
 Author: Ahmed Y. Azzam
 Version: 1.0
-Date: 2025
+Date: November 2025
 
 Usage Example:
 -------------
