@@ -13,6 +13,7 @@ Key Features:
 - Variance decomposition: T_BMA = W̄ + (1+1/M)B_within + B_between
 - Single-file implementation (~1000 lines)
 - Runtime: 20-40 seconds for typical meta-analysis
+- Can be used in LLM-based Python runtime interface while efficiently handling limited computational needs
 
 Author: Ahmed Y. Azzam
 Version: 1.0
