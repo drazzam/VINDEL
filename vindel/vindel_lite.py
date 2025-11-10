@@ -14,8 +14,8 @@ Key Features:
 - Single-file implementation (~1000 lines)
 - Runtime: 20-40 seconds for typical meta-analysis
 
-Author: Adapted from VINDEL framework by Ahmed Y. Azzam
-Version: 1.0 (Lite)
+Author: Ahmed Y. Azzam
+Version: 1.0
 Date: 2025
 
 Usage Example:
